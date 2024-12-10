@@ -7,7 +7,7 @@ Bienvenue sur mon portfolio! Je suis un développeur web fullstack en Javascript
 - Expériences
 - Compétences
 - Langues
-  [Projets
+- Projets
 - Loisirs et Activités
 - Contactez-moi
 - Mes coordonnées
