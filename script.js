@@ -1,4 +1,4 @@
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Merci pour votre message !');
+    alert('Thanks for your feedback!');
 });
