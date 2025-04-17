@@ -584,6 +584,9 @@ h2:hover::after {
 .project-8 {
     background-image: url('img/morp.PNG');
 }
+.project-9 {
+    background-image: url('img/predy.PNG');
+}
 
 #langues, #loisirs {
     padding: 20px 0;     text-align: center; }
