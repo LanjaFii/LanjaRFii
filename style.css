@@ -519,74 +519,75 @@ h2:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    align-items: stretch; /* Important pour aligner toutes les cases */
 }
 
+/* Uniformise la hauteur */
 .project {
-    position: relative;     border: 1px solid #ddd;
-    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px; /* Fixe ou max-height si tu veux du responsive variable */
+    border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 20px;
     text-align: center;
-    overflow: hidden;     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: rgba(0, 0, 0, 0.6); /* fallback pour lisibilité */
 }
 
-.project h3, .project p{
+.project h3, .project p {
+    position: relative;
+    z-index: 2;
     color: white;
-    border-radius: 5px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(34, 34, 34, 0.9), rgba(0, 204, 255, 0.7));
-    font-weight: bold; }
+    background: rgba(0, 0, 0, 0.6); /* fond semi-transparent lisible */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: font-weight 0.3s;
+}
 
+/* L’arrière-plan flouté */
 .project::before {
-    content: '';     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: inherit;     background-size: cover;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
     background-position: center;
-    filter: blur(4px);     z-index: 1;     transition: opacity 0.3s, filter 0.3s; }
+    filter: blur(4px);
+    z-index: 1;
+    transition: opacity 0.3s, filter 0.3s;
+}
 
 .project:hover::before {
-    filter: blur(0); }
-
-.project h3, .project p {
-    position: relative;     z-index: 2;     transition: font-weight 0.3s; }
-
-.project:hover h3, .project:hover p {
-    font-weight: bold; }
+    filter: blur(0);
+    opacity: 0.8;
+}
 
 .project:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
+.project:hover h3,
+.project:hover p {
+    font-weight: 900;
+}
 
-.project-1 {
-    background-image: url('img/bool.PNG'); 
-}
-.project-2 {
-    background-image: url('img/blog.PNG');
-}
-.project-3 {
-    background-image: url('img/blocnote.jpg');
-}
-.project-4 {
-    background-image: url('img/empl.png');
-}
-.project-5 {
-    background-image: url('img/robot.jpg');
-}
-.project-6 {
-    background-image: url('img/elections.jpg');
-}
-.project-7 {
-    background-image: url('img/matrice.jpg');
-}
-.project-8 {
-    background-image: url('img/morp.PNG');
-}
-.project-9 {
-    background-image: url('img/predy.png');
-}
+/* Spécifie les images de fond */
+.project-1 { background-image: url('img/bool.PNG'); }
+.project-2 { background-image: url('img/blog.PNG'); }
+.project-3 { background-image: url('img/blocnote.jpg'); }
+.project-4 { background-image: url('img/empl.png'); }
+.project-5 { background-image: url('img/robot.jpg'); }
+.project-6 { background-image: url('img/elections.jpg'); }
+.project-7 { background-image: url('img/matrice.jpg'); }
+.project-8 { background-image: url('img/morp.PNG'); }
+.project-9 { background-image: url('img/predy.png'); }
 
 #langues, #loisirs {
     padding: 20px 0;     text-align: center; }
